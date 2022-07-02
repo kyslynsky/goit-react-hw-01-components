@@ -31,6 +31,7 @@ export const StatItem = styled.li`
   align-items: center;
   flex-basis: calc(100% / ${statsQuantity});
   padding: 2%;
+  background-color: ${props => props.backgroundColor};
 
   &:first-child {
     border-radius: 0 0 0 5px;

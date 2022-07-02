@@ -10,11 +10,11 @@ import {
 export const FriendList = ({ friends }) => {
   return (
     <Friends>
-      {friends.map(friend => (
-        <FriendCard key={friend.id}>
-          <OnlineChip isOnline={friend.isOnline}></OnlineChip>
-          <FriendImg src={friend.avatar} alt="User avatar" />
-          <FriendName>{friend.name}</FriendName>
+      {friends.map(({ id, isOnline, avatar, name }) => (
+        <FriendCard key={id}>
+          <OnlineChip isOnline={isOnline}></OnlineChip>
+          <FriendImg src={avatar} alt="User avatar" />
+          <FriendName>{name}</FriendName>
         </FriendCard>
       ))}
     </Friends>

@@ -19,11 +19,11 @@ export const TransactionHistory = ({ items }) => {
       </TableHead>
 
       <tbody>
-        {items.map(item => (
-          <TableRow key={item.id}>
-            <TableData>{item.type}</TableData>
-            <TableData>{item.amount}</TableData>
-            <TableData>{item.currency}</TableData>
+        {items.map(({ id, type, amount, currency }) => (
+          <TableRow key={id}>
+            <TableData>{type}</TableData>
+            <TableData>{amount}</TableData>
+            <TableData>{currency}</TableData>
           </TableRow>
         ))}
       </tbody>
